@@ -6,7 +6,16 @@ import './Layout.css'
 import { Outlet,NavLink } from 'react-router-dom'
 
 const Header = () => {
-  const [isLogin, setLogin] = useState(false);
+  const [isLogin, setLogin] = useState();
+  const [isHeader2Visible,setIsHeader2Visible]=useState(true);
+  const handleLogin=()=>{
+    setLogin(true);
+    setIsHeader2Visible(false);
+  }
+  const handleSignUp=()=>{
+    setLogin(false);
+    setIsHeader2Visible(false);
+}
   return (
     <>
     <div className='Header1'>
@@ -14,11 +23,11 @@ const Header = () => {
         <div className='Connect'><MdMarkEmailUnread />courierinfo256@gmail.com</div>
       <div className="Header-Top"><IoPersonCircleSharp /></div>
       <div className="Form-Toggle"> 
-        <button className={isLogin ? 'active' : ''} onClick={() => setLogin(true)}>Login</button>
-        <button className={!isLogin ? 'active' : ''} onClick={() => setLogin(false)}>SignUp</button>
+        <NavLink to ='/login'><button  className={isLogin ? 'active' : ''}onClick={handleLogin}>Login</button></NavLink>
+        <NavLink to='/signup'><button className={!isLogin ? 'active' : ''} onClick={handleSignUp} >SignUp</button></NavLink>
       </div>
       </div>
-        <div className='Header2'>
+        <div className={isHeader2Visible?"Header2":"hide"}>
           <ul>
           <li>
             <NavLink to ='/'className={({isActive})=>isActive? "active-link":""}>

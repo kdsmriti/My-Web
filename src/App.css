@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  .userLogin{  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    gap:10px;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.input-error{
+    border:2px solid red;
+}
+.error-msg{
+    color:red;
+}
+input{
+    height:20px;
+    border-radius: 5px;
+    width: 200px;
+    margin-left:2px;
+}
+.button {
+    margin-left: 0;
+    align-self: center;
+    height:30px;
+    width: 80px;
+    font-size:1em;
+    background-color: #24EC8F;
+}
+
+.SignUp{
+   display: flex;
+    flex-direction: column;
+    justify-content : center;
+    align-items: center;
+    font-weight: 500;
+    gap:15px;
+    top:40%;
+    left:50%;
+    position: fixed;
+    transform:translate(-50%,-50%);
+
+}
+.hero{
+    margin-top:25px;
+}
+.container{
+    margin-left: 50px;
+    line-height:3em;
+    display: flex;
+    flex-direction: column;
+}
+.container button{
+    background-color: #24EC8F;
+    padding:5px;
+    margin-left:55px;
+    width:200px;
+}
+.Quotation{
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.Shipment-Content{
+    width: 50%;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:5px;
+    width:500px;
+    background-color: #24EC8F;
+    margin:5px;
+    height:600px;
+    overflow: hidden;
+}
+.grid-container label,select{
+font-weight: 500;
+margin-left:10px;
+}
+textarea{
+    height:100px;
+    width:200px;
+    margin-left:10px;
+}
+.qbutton{
+    margin-left:20px;
+    width:150px;
+}
+
+
+
+
+

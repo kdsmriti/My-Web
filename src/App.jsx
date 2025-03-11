@@ -1,9 +1,9 @@
 import "./App.css";
 import Header from "./Components/Header";
 import {
-  createBrowserRouter,RouterProvider
+  createBrowserRouter,RouterProvider,Navigate
 } from "react-router-dom";
-import React from "react";
+import React, { useState } from "react";
 import Home from "./Components/Pages/Home";
 import Services from "./Components/Pages/Services";
 import Tracking from "./Components/Pages/Tracking";
@@ -12,6 +12,9 @@ import AboutUs from "./Components/Pages/AboutUs";
 import ContactUs from "./Components/Pages/ContactUs";
 import Blogs from "./Components/Pages/Blogs";
 import Layout from "./Components/Layout";
+import Login from "./Components/Pages/Login";
+import SignUp from "./Components/Pages/SignUp";
+import Quotation from "./Components/Pages/Quotation";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -70,6 +73,30 @@ const router = createBrowserRouter([
         element: (
           <div>
             <Blogs />
+          </div>
+        )
+      },
+      {
+        path: "/login",
+        element: (
+          <div>
+            <Login />
+          </div>
+        )
+      },
+      {
+        path: "/signup",
+        element: (
+          <div>
+            <SignUp/>
+          </div>
+        )
+      },
+      {
+        path: "/quotation",
+        element: (
+          <div>
+            <Quotation/>
           </div>
         )
       }
